@@ -3,7 +3,7 @@
 
   <PawnKindDef Abstract="True" Name="BaseTemplatePawnKind">
     <race>R2Series</race>
-    <combatPower>40</combatPower>
+    <combatPower>41</combatPower>
     <baseRecruitDifficulty>0.50</baseRecruitDifficulty>
     <isFighter>false</isFighter>
     <apparelIgnoreSeasons>true</apparelIgnoreSeasons>

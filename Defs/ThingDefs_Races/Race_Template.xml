@@ -126,12 +126,12 @@
         -->
 
         <!-- TODO: Check real trait names! -->
-          <disallowedTraits>
-            <li>Transhumanist</li>
-            <li>BodyPurist</li>
-            <li>Gourmand</li>
-            <li>Xenophobia</li> <!--From mod! Check if it breaks (Humanoid Alien Races 2.0)-->
-          </disallowedTraits>
+        <disallowedTraits>
+          <li>Transhumanist</li>
+          <li>BodyPurist</li>
+          <li>Gourmand</li>
+          <li>Xenophobia</li>          <!--From mod! Check if it breaks (Humanoid Alien Races 2.0)-->
+        </disallowedTraits>
 
 
         <!-- Force only one gender?
@@ -373,9 +373,17 @@
       <hediffGiverSets>        <!--What is this? -->
         <li>OrganicStandard</li>
       </hediffGiverSets>
+
+
+      
+
+
+
     </race>
 
     <!-- TODO: Fix repairable parts, prod-arm, radar(eye?) and so on -->
+
+
 
     <recipes>
       <li>InstallArchotechEye</li>

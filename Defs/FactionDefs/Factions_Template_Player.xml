@@ -2,14 +2,14 @@
 <!--This whole faction and scenario is just here so that you can quickly jump into the game and test your race-->
 <Defs>
 
-  <FactionDef Abstract="True" Name="TemplateFactionBase">
+  <FactionDef Abstract="True" Name="R2DroidsFaction">
     <colorSpectrum>
       <li>(0, 1, 0)</li>
     </colorSpectrum>
   </FactionDef>
   
-    <FactionDef Parent="TemplateFactionBase">
-    <defName>TemplatePlayerColonyTribal</defName>
+    <FactionDef Parent="R2DroidsFaction">
+    <defName>R2DroidsPlayerColonyTribal</defName>
     <label>Template Scenario</label>
     <description>Template Testing.</description>
     <isPlayer>true</isPlayer>

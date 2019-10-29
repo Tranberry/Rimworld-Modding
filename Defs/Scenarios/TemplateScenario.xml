@@ -10,7 +10,7 @@
 <summary>TEST</summary>
 		<playerFaction>
 			<def>PlayerFaction</def>
-			<factionDef>TemplatePlayerColonyTribal</factionDef>
+			<factionDef>R2DroidsPlayerColonyTribal</factionDef>
 		</playerFaction>
 		<parts>
 			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">

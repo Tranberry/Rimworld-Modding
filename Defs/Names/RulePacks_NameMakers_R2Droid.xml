@@ -5,10 +5,10 @@
     <defName>NamerR2Droid</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->[R2DroidName1] [R2DroidName2]</li>
-        <li>name->[R2DroidNickname] [R2DroidName1]</li>
-        <li>name->[R2DroidName1] '[R2DroidNickname]' [R2DroidName2]</li>
-        <li>name->[R2DroidName1] [R2DroidNickname]</li>
+        <li>name->[R2DroidName1]-[R2DroidName2]</li>
+        <li>name->[R2DroidNickname]-[R2DroidName1]</li>
+        <li>name->[R2DroidName1]-'[R2DroidNickname]'-[R2DroidName2]</li>
+        <li>name->[R2DroidName1]-[R2DroidNickname]</li>
 
       </rulesStrings>
       <rulesRaw>
@@ -32,10 +32,10 @@
     <defName>NamerR2DroidF</defName>
     <rulePack>
       <rulesStrings>
-        <li>name->[R2DroidName1] [R2DroidName2]</li>
-        <li>name->[R2DroidNickname] [R2DroidName1]</li>
-        <li>name->[R2DroidName1] '[R2DroidNickname]' [R2DroidName2]</li>
-        <li>name->[R2DroidName1] [R2DroidNickname]</li>
+        <li>name->[R2DroidName1]-[R2DroidName2]</li>
+        <li>name->[R2DroidNickname]-[R2DroidName1]</li>
+        <li>name->[R2DroidName1]-'[R2DroidNickname]'-[R2DroidName2]</li>
+        <li>name->[R2DroidName1]-[R2DroidNickname]</li>
 
       </rulesStrings>
       <rulesRaw>

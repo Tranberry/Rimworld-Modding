@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AlienRace.RaceSettings>
+    <defName>DroidsR2</defName>    <!-- defName, what is it used for/ where is it called? -->
+    <pawnKindSettings>
+      <alienslavekinds>        <!-- I guess this asks if the race could be a slave, not sure what "Template" in the list means.-->
+        <li>
+          <kindDefs>
+            <li>Template</li>
+          </kindDefs>
+          <chance>40.0</chance>
+        </li>
+      </alienslavekinds>
+      <alienrefugeekinds>        <!-- I guess this asks if the race could be a refugee, not sure what "Template" in the list means.-->
+        <li>
+          <kindDefs>
+            <li>Template</li>
+          </kindDefs>
+          <chance>50.0</chance>
+        </li>
+      </alienrefugeekinds>
+      <startingColonists>        <!-- I guess this asks if the race be in the starting pool of pawns, not sure what "Template" in the list means.-->
+        <li>
+          <pawnKindEntries>
+            <li>
+              <kindDefs>
+                <li>Template</li>
+              </kindDefs>
+              <chance>10.0</chance>
+            </li>
+          </pawnKindEntries>
+          <factionDefs>
+            <li>PlayerColony</li>            <!-- I guess this tells the game which faction the race should be in *when* in the starting pool? -->
+          </factionDefs>
+        </li>
+      </startingColonists>
+      <alienwandererkinds>        <!-- I guess this asks if the race could be a wanderer, not sure what "Template" in the list means.-->
+        <li>
+          <pawnKindEntries>
+            <li>
+              <kindDefs>
+                <li>Template</li>
+              </kindDefs>
+              <chance>50.0</chance>
+            </li>
+          </pawnKindEntries>
+          <factionDefs>
+            <li>PlayerColony</li>
+          </factionDefs>
+        </li>
+      </alienwandererkinds>
+    </pawnKindSettings>
+  </AlienRace.RaceSettings>
+
+
+  <ThingDef Name="BaseR2Droid" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>    <!-- What is tickerType? -->
+    <altitudeLayer>Pawn</altitudeLayer>    <!-- I guess this tells if the race should be rendered below the ground or something like that -->
+    <useHitPoints>false</useHitPoints>    <!-- hitpoints might be objects only? -->
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>    <!-- Change to something metally (sound if hit by projectile/bullet)-->
+    <inspectorTabs>      <!-- which tabs you can look at for the race (check needs and such) -->
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+      <li>ITab_Pawn_Social</li>
+      <li>ITab_Pawn_Log</li>
+      <li>ITab_Pawn_FormingCaravan</li>
+    </inspectorTabs>
+    <statBases>      <!-- not sure what mass impacts here, seems to be important for caravans and such -->
+      <Mass>70</Mass>
+    </statBases>
+    <comps>      <!-- no clue -->
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>    <!-- no clue -->
+  </ThingDef>
+
+
+  <AlienRace.ThingDef_AlienRace ParentName="BaseR2Droid">
+    <defName>R2Series</defName>
+    <label>UniqueCodeLjyiLqr2WmdVlV</label>
+    <description>Basic Template UniqueCode ncfgJ</description>
+    <alienRace>
+      <generalSettings>
+        <maleGenderProbability>0.01</maleGenderProbability>
+        <immuneToAge>true</immuneToAge>
+
+        <!-- Add charging station for the droids
+          <validBeds>
+          <li>DroidChargingStation</li>
+        </validBeds>
+        -->
+
+
+        <!-- TODO: check traits
+        <forcedRaceTraitEntries>
+         <li>
+            <defname>Nerves</defname>
+            <degree>2</degree>
+            <chance>50</chance>
+            <commonalityMale>50</commonalityMale>
+          </li>
+          <li>
+            <defname>Beauty</defname>
+            <degree>2</degree>
+            <chance>50</chance>
+          </li>
+          <li>
+            <defname>Gay</defname>
+            <chance>50</chance>
+          </li>
+          <li>
+            <defname>Psychopath</defname>
+          </li>
+        </forcedRaceTraitEntries>
+        -->
+
+        <!-- TODO: Check real trait names! -->
+          <disallowedTraits>
+            <li>Transhumanist</li>
+            <li>BodyPurist</li>
+            <li>Gourmand</li>
+            <li>Xenophobia</li> <!--From mod! Check if it breaks (Humanoid Alien Races 2.0)-->
+          </disallowedTraits>
+
+
+        <!-- Force only one gender?
+
+        <alienbodytypes>
+          <li>Female</li>
+        </alienbodytypes>
+
+        <useGenderedHeads>false</useGenderedHeads>
+        <useGenderedBodies>false</useGenderedBodies>
+        
+        -->
+
+        <canLayDown>false</canLayDown>
+
+
+        <alienPartGenerator>
+          <aliencrowntypes>
+            <li>DroidR2Head</li>            <!-- TODO: Change to R2Dome1Head and rename the textures/images!!!-->
+            <!-- <li>R2Dome2Head</li> TODO:! -->
+            <!-- <li>R2Cone1Head</li> TODO:! -->
+            <!-- <li>R2Cone2Head</li> TODO:! -->
+          </aliencrowntypes>
+
+          <alienbodytypes>
+            <!-- <li>Male</li> -->
+            <li>Female</li>
+            <!-- <li>R2Cone1Head</li> TODO: Check if you can use snything beside Male/Female/Thin -->
+          </alienbodytypes>
+
+
+          <!-- // This first colorgen decides your alien's skin color. You can add several by copy and pasting. -->
+          <alienskincolorgen Class="ColorGenerator_Options">
+            <options>
+              <li>
+                <weight>8</weight>
+                <only>RGBA(0.76, 0, 0, 0.99)</only>
+              </li>
+              <li>
+                <weight>8</weight>
+                <only>RGBA(0.85, 0.72, 0.5, 0.99)</only>
+              </li>
+              <li>
+                <weight>8</weight>
+                <only>RGBA(0.16, 0.55, 0.16, 0.99)</only>
+              </li>
+              <li>
+                <weight>8</weight>
+                <only>RGBA(0.11, 0.26, 0.62, 0.99)</only>
+              </li>
+              <li>
+                <weight>2</weight>
+                <only>RGBA(0.74, 0.57, 0.57, 0.92)</only>
+              </li>
+            </options>
+          </alienskincolorgen>
+          <!-- // This colorgen determines hair color. It works just like the previous colorgen. -->
+          <alienhaircolorgen Class="ColorGenerator_Options">
+            <options>
+              <li>
+                <weight>5</weight>
+                <only>RGBA(1,0.2,0.5,1)</only>
+              </li>
+            </options>
+          </alienhaircolorgen>
+          <useSkincolorForHair>true</useSkincolorForHair>
+          <!-- // This stuff changes your race's size. Remember to also change the customportrait size, otherwise your changes wont appear in the character creator. -->
+          <customDrawSize>(0.8, 0.8)</customDrawSize>
+          <customHeadDrawSize>(0.8, 0.8)</customHeadDrawSize>
+          <customPortraitDrawSize>(0.8, 0.8)</customPortraitDrawSize>
+          <customPortraitHeadDrawSize>(0.8, 0.8)</customPortraitHeadDrawSize>
+        </alienPartGenerator>
+
+        <chemicalSettings>
+          <!-- Droids can't eat/inhale biostuff to change behaivor -->
+        </chemicalSettings>
+        <humanRecipeImport>false</humanRecipeImport>
+      </generalSettings>
+
+
+      <graphicPaths>
+        <li>
+          <body>Body/</body>
+          <head>Head/</head>
+        </li>
+      </graphicPaths>
+
+
+      <hairSettings>
+        <hasHair>false</hasHair>
+        <!-- <getsGreyAt>80</getsGreyAt>
+        <hairTags>
+          <li>TemplateHair</li>
+        </hairTags>  -->
+      </hairSettings>
+      <!-- <relationSettings> TODO: check if this breaks anything beside no realtions
+        <relationChanceModifierChild>0</relationChanceModifierChild>
+        <relationChanceModifierExLover>0</relationChanceModifierExLover>
+        <relationChanceModifierExSpouse>0</relationChanceModifierExSpouse>
+        <relationChanceModifierFiance>0</relationChanceModifierFiance>
+        <relationChanceModifierLover>0</relationChanceModifierLover>
+        <relationChanceModifierParent>0</relationChanceModifierParent>
+        <relationChanceModifierSibling>1</relationChanceModifierSibling>
+        <relationChanceModifierSpouse>0</relationChanceModifierSpouse>
+      </relationSettings> -->
+    </alienRace>
+
+
+    <statBases>
+      <MarketValue>3500</MarketValue>
+      <MoveSpeed>5.8</MoveSpeed>
+      <Flammability>0.3</Flammability>
+      <ComfyTemperatureMin>-20</ComfyTemperatureMin>
+      <ComfyTemperatureMax>60</ComfyTemperatureMax>
+      <LeatherAmount>25</LeatherAmount>
+      <PsychicSensitivity>0.01</PsychicSensitivity>
+      <MiningSpeed>3</MiningSpeed>
+    </statBases>
+
+
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Scratch</def>
+              <amount>22</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>22</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>5</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+
+
+    <race>      <!--TODO: Everything here needs to be replaced -->
+
+      <hasGenders>true</hasGenders>      <!-- WARNING TODO: Check fix head -->
+      <!-- <fleshType>Mechanoid</fleshType>  WARNING TODO: Check if this breaks the mod -->
+
+      <thinkTreeMain>Humanlike</thinkTreeMain>      <!-- default: Humanlike -->
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>2500</lifeExpectancy>
+      <nameCategory>HumanStandard</nameCategory>
+      <leatherDef>Leather_Human</leatherDef>
+      <body>R2Droid_body</body>
+      <meatColor>(0, 128, 0)</meatColor>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>1</baseHealthScale>
+      <foodType>OmnivoreHuman</foodType>
+      <gestationPeriodDays>45</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0.02)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeStageAges>
+        <li>
+          <def>HumanlikeBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>HumanlikeToddler</def>
+          <minAge>1.2</minAge>
+        </li>
+        <li>
+          <def>HumanlikeChild</def>
+          <minAge>4</minAge>
+        </li>
+        <li>
+          <def>HumanlikeTeenager</def>
+          <minAge>13</minAge>
+        </li>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>18</minAge>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <specialShadowData>
+        <volume>(0.3, 0.8, 0.4)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </specialShadowData>
+      <ageGenerationCurve>
+        <points>
+          <li>(14,0)</li>
+          <li>(16,100)</li>
+          <li>(50,100)</li>
+          <li>(60,30)</li>
+          <li>(70,18)</li>
+          <li>(80,10)</li>
+          <li>(90,3)</li>
+          <li>(100,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>        <!--What is this? -->
+        <li>OrganicStandard</li>
+      </hediffGiverSets>
+    </race>
+
+    <!-- TODO: Fix repairable parts, prod-arm, radar(eye?) and so on -->
+
+    <recipes>
+      <li>InstallArchotechEye</li>
+      <li>InstallArchotechArm</li>
+      <li>InstallArchotechLeg</li>
+      <li>InstallPowerClaw</li>
+      <li>InstallBionicEye</li>
+      <li>InstallBionicArm</li>
+      <li>InstallBionicLeg</li>
+      <li>InstallBionicSpine</li>
+      <li>InstallBionicHeart</li>
+      <li>InstallBionicStomach</li>
+      <li>InstallBionicEar</li>
+      <li>InstallSimpleProstheticArm</li>
+      <li>InstallSimpleProstheticLeg</li>
+      <li>InstallSimpleProstheticHeart</li>
+      <li>InstallCochlearImplant</li>
+      <li>InstallPegLeg</li>
+      <li>InstallDenture</li>
+      <li>InstallJoywire</li>
+      <li>InstallPainstopper</li>
+      <li>InstallNaturalHeart</li>
+      <li>InstallNaturalLung</li>
+      <li>InstallNaturalKidney</li>
+      <li>InstallNaturalLiver</li>
+      <li>ExciseCarcinoma</li>
+      <li>RemoveBodyPart</li>
+      <li>Euthanize</li>
+      <li>Anesthetize</li>
+    </recipes>
+  </AlienRace.ThingDef_AlienRace>
+
+</Defs>

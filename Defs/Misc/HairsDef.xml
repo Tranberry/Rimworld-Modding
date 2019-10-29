@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!--Simply copy and paste this section to add more hairstyles. Remember to rename and relabel things accordingly-->
+  <HairDef>
+    <defName>TemplateHair</defName>
+    <label>TemplateHair</label>
+    <hairGender>Any</hairGender>
+    <texPath>Hair/TemplateHair</texPath>
+		<hairTags>
+			<li>TemplateHair</li>
+		</hairTags>
+  </HairDef>
+
+</Defs>

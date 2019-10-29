@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--This whole faction and scenario is just here so that you can quickly jump into the game and test your race-->
+<Defs>
+
+  <FactionDef Abstract="True" Name="TemplateFactionBase">
+    <colorSpectrum>
+      <li>(0, 1, 0)</li>
+    </colorSpectrum>
+  </FactionDef>
+  
+    <FactionDef Parent="TemplateFactionBase">
+    <defName>TemplatePlayerColonyTribal</defName>
+    <label>Template Scenario</label>
+    <description>Template Testing.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>Template</basicMemberKind>
+    <pawnsPlural>colonists</pawnsPlural>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <techLevel>Ultra</techLevel>
+    <backstoryCategories>
+      <li>Civil</li>
+  	</backstoryCategories>
+    <homeIconPath>World/TemplateBaseIcon</homeIconPath>
+    <expandingIconTexture>World/TemplateBaseIcon</expandingIconTexture>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+      <hairTags>
+        <li>TemplateHair</li>
+      </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <colorSpectrum>
+      <li>(1, 0, 0.2)</li>
+    </colorSpectrum>
+  </FactionDef>
+
+</Defs>

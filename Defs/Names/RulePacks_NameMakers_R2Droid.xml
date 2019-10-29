@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerR2Droid</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[R2DroidName1] [R2DroidName2]</li>
+        <li>name->[R2DroidNickname] [R2DroidName1]</li>
+        <li>name->[R2DroidName1] '[R2DroidNickname]' [R2DroidName2]</li>
+        <li>name->[R2DroidName1] [R2DroidNickname]</li>
+
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>R2DroidName1</keyword>
+          <path>R2droidNames/R2DroidName1</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>R2DroidName2</keyword>
+          <path>R2droidNames/R2DroidName2</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>R2DroidNickname</keyword>
+          <path>R2droidNames/R2DroidNickname</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>NamerR2DroidF</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>name->[R2DroidName1] [R2DroidName2]</li>
+        <li>name->[R2DroidNickname] [R2DroidName1]</li>
+        <li>name->[R2DroidName1] '[R2DroidNickname]' [R2DroidName2]</li>
+        <li>name->[R2DroidName1] [R2DroidNickname]</li>
+
+      </rulesStrings>
+      <rulesRaw>
+        <li Class="Rule_File">
+          <keyword>R2DroidName1</keyword>
+          <path>R2droidNames/R2DroidName1</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>R2DroidName2</keyword>
+          <path>R2droidNames/R2DroidName2</path>
+        </li>
+        <li Class="Rule_File">
+          <keyword>R2DroidNickname</keyword>
+          <path>R2droidNames/R2DroidNickname</path>
+        </li>
+      </rulesRaw>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

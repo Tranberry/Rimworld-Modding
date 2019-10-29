@@ -305,6 +305,9 @@
       <hasGenders>true</hasGenders>      <!-- WARNING TODO: Check fix head -->
       <!-- <fleshType>Mechanoid</fleshType>  WARNING TODO: Check if this breaks the mod -->
 
+      <nameGenerator>NamerR2Droid</nameGenerator>
+      <nameGeneratorFemale>NamerR2DroidF</nameGeneratorFemale>
+
       <thinkTreeMain>Humanlike</thinkTreeMain>      <!-- default: Humanlike -->
       <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
       <intelligence>Humanlike</intelligence>

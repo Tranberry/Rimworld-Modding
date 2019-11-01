@@ -1,0 +1,41 @@
+Dome
+	Radar Eye
+	Logic Display front
+	Logic Display rear
+	Holographic Projector Main
+	Holographic Projector Secondary
+	Processor Status Indicator
+	? Emergancy Flare
+	Periscope/+Antenna
+	? Drink Serving Arm
+	? Fire extinguisher
+	Life Form Scanner
+	
+Body
+	Dome
+		Radar Eye
+		Logic Display front
+		Logic Display rear
+		Holographic Projector Main
+		Holographic Projector Secondary
+		Processor Status Indicator
+		? Emergancy Flare
+		Periscope/+Antenna
+		? Drink Serving Arm
+		? Fire extinguisher
+		Life Form Scanner
+	Large Data Port
+	Utility Arm Upper
+		? Joint gripper?
+	Utility Arm Lower
+		*
+	? Polarity Sink (x5)
+	Diagnostic Display
+	Leghub
+		Leg
+			Foothub
+				Foot
+				Battery
+				
+? Ignore or not
+* Similar to another part hirarchy

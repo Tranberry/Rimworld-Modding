@@ -17,5 +17,5 @@ https://github.com/RimWorld-CCL-Reborn/AlienRaces
 ## Acknowledgments
 
 * Erdelf - /RimWorld-CCL-Reborn/AlienRaces
-* @Bummer6#6587 @ Discord - Template
+* Bummer6#6587 @ Discord - Template
 * SW - Inspiration

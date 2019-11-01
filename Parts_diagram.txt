@@ -1,16 +1,3 @@
-Dome
-	Radar Eye
-	Logic Display front
-	Logic Display rear
-	Holographic Projector Main
-	Holographic Projector Secondary
-	Processor Status Indicator
-	? Emergancy Flare
-	Periscope/+Antenna
-	? Drink Serving Arm
-	? Fire extinguisher
-	Life Form Scanner
-	
 Body
 	Dome
 		Radar Eye

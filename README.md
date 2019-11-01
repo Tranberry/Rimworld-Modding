@@ -1,4 +1,4 @@
-# Rimworld-Modding
+# R2Droids mod for Rimworld
  R2-Series race for RimWorld Humanoid Races mod
 
  ![Alt text](About/preview.png?raw=true "mod promo image")
